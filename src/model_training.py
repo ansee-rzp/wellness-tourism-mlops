@@ -38,7 +38,7 @@ def main():
     models = {
         "RandomForest": RandomForestClassifier(n_estimators=100, random_state=42),
         "GradientBoosting": GradientBoostingClassifier(n_estimators=100, random_state=42),
-        "XGBoost": XGBClassifier(n_estimators=100, random_state=42, eval_metric='logloss')
+        "XGBoost": XGBClassifier(n_estimators=100, max_depth=5, learning_rate=0.1, random_state=42, eval_metric='logloss')
     }
     
     best_model = None
